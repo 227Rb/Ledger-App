@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0"
+    tools:context=".SecAtivity">
+
+    <com.example.nan.tbook.CustomView.MyAppTitle
+        android:id="@+id/myNewAppTitle"
+        android:layout_width="match_parent"
+        android:outlineProvider="bounds"
+        android:elevation="2dp"
+        android:layout_height="wrap_content">
+    </com.example.nan.tbook.CustomView.MyAppTitle>
+
+
+    <!--头部-->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="-5dp"
+       android:layout_marginLeft="5dp"
+       android:layout_marginRight="5dp"
+       android:orientation="vertical"
+       android:background="@drawable/bg_edit">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="净资产"
+           android:textColor="#000"
+           android:textSize="20dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:id="@+id/sec_amout_real"
+           android:layout_height="50dp"
+           android:text="0000.00"
+           android:textColor="#000"
+           android:gravity="top"
+           android:textSize="35dp"
+           android:layout_marginLeft="10dp"/>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginBottom="5dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="负债:"
+               android:textColor="#8B8686"
+               android:textSize="16dp"
+               android:layout_marginLeft="10dp"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="0000.00"
+               android:textColor="#8B8686"
+               android:textSize="16dp"
+               android:layout_marginLeft="5dp"
+               android:id="@+id/sec_amout_burrow"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="/"
+               android:textColor="#8B8686"
+               android:textSize="16dp"
+               android:layout_marginLeft="5dp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="0000.00"
+               android:textColor="#8B8686"
+               android:textSize="16dp"
+               android:layout_marginLeft="5dp"
+               android:id="@+id/sec_buget_burrow"/>
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="总资产:"
+               android:textColor="#8B8686"
+               android:textSize="16dp"
+               android:layout_marginLeft="20dp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="0000.00"
+               android:textColor="#8B8686"
+               android:textSize="16dp"
+               android:layout_marginLeft="5dp"
+               android:id="@+id/sec_amout_all"/>
+
+       </LinearLayout>
+       </LinearLayout>
+    <!--中部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="我的账户"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sec_accout_list"></android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/sec_add_account"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_edit"
+            android:text="+ 添加账户"
+            android:textColor="#FF9800"
+            android:textSize="20dp"/>
+   </LinearLayout>
+
+
+</LinearLayout>

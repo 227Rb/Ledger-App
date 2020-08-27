@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.nan.tbook.CustomView.MyAppTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myNewAppTitle">
+    </com.example.nan.tbook.CustomView.MyAppTitle>
+
+    <LinearLayout
+        android:layout_below="@+id/myNewAppTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--标题行-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/choose_date_view"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/show_month_view"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|center"
+                    android:maxLines="1"
+                    android:text="12"
+                    android:textColor="#000000"
+                    android:textSize="19.3sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="14dp"
+                    android:gravity="bottom"
+                    android:maxLines="1"
+                    android:text="月"
+                    android:textColor="#000000"
+                    android:textSize="19.3sp" />
+                <TextView
+                    android:id="@+id/show_year_view"
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="2019年"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/back_today_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_button"
+                    android:layout_marginRight="2dp"
+                    android:text="今"
+                    android:gravity="center"
+                    android:textColor="#ff9c0e"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+            <!--按键行-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="right">
+
+
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/scroll_switch"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="24dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingLeft="4dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingRight="4dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_toLeftOf="@id/back_today_button"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="8dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/bg_button"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="切换周月"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ff9c0e"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="14sp"/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/theme_switch"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="24dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingLeft="4dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingRight="4dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_toLeftOf="@id/scroll_switch"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="8dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/bg_button"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="更改效果"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ff9c0e"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="14sp"/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/next_month"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="24dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingLeft="4dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingRight="4dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_toLeftOf="@id/scroll_switch"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="8dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/bg_button"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="下一月"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ff9c0e"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="14sp"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/last_month"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="24dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingLeft="4dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingRight="4dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_toLeftOf="@id/scroll_switch"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="8dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/bg_button"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="上一月"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ff9c0e"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="14sp"/>&ndash;&gt;-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--日期栏-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="#fff">
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="一"
+                android:textSize="17dp"
+                android:textColor="#000000"/>
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="二"
+                android:textSize="17dp"
+                android:textColor="#000000"/>
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="三"
+                android:textSize="17dp"
+                android:textColor="#000000"/>
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="四"
+                android:textSize="17dp"
+                android:textColor="#000000"/>
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="五"
+                android:textSize="17dp"
+                android:textColor="#000000"/>
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="六"
+                android:textSize="17dp"
+                android:textColor="#000000"/>
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="日"
+                android:textSize="17dp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+        <!--日期栏下横线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_height="1px"
+            android:background="#c6c6c6"/>
+
+        <!--协调布局块-->
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FD0000">
+
+
+            <com.example.nan.tbook.Calender.view.MonthPager
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="#ffffff"></com.example.nan.tbook.Calender.view.MonthPager>
+
+            <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0F0F0"
+            app:layout_behavior="com.example.nan.tbook.Calender.behavior.RecyclerViewBehavior"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:layout_marginBottom="40dp"/>
+
+            <!--paddingBottom或者magin距离必须是MonthPager高度的1/6-->
+            <!--RecyclerView的高度必须是MatchParent-->
+            <!--RecyclerView的background必须是非透明-->
+            <!--android:layout_weight="1"-->
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/bottom_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="300dp"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+                <!--内部只能容纳一个子控件-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--键盘头-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:background="@android:color/white">
+
+                    <Spinner
+                        android:id="@+id/in_pay_way"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        style="@style/spinner_style"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="-130dp"
+                        android:layout_height="match_parent"></Spinner>
+
+                        <EditText
+                            android:id="@+id/input_amout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_edit"
+                            android:paddingRight="20dp"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:text="0"
+                            android:gravity="right|center"/>
+
+                    </LinearLayout>
+
+                    <!--键盘部分-->
+                    <LinearLayout
+                        android:id="@+id/keyboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F0F0F0"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:visibility="visible">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.73">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/white"
+                                    android:id="@+id/keyboard_out"
+                                    android:src="@drawable/ketboard_out_money"/>
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#F3F1F1"
+                                    android:id="@+id/keyboard_in"
+                                    android:src="@drawable/keyboard_in_money" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <!--键盘中-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:visibility="visible">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/background_white"
+                                android:visibility="visible">
+
+                                <TableRow android:layout_weight="1">
+
+                                    <Button
+                                        android:id="@+id/keyboard_seven"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="7" />
+
+
+
+                                    <Button
+                                        android:id="@+id/keyboard_eight"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="8" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_nine"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="9" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_add"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="+" />
+                                </TableRow>
+
+                                <TableRow android:layout_weight="1">
+
+                                    <Button
+                                        android:id="@+id/keyboard_four"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="4" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_five"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="5" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_six"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="6" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_sub"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="-" />
+                                </TableRow>
+
+                                <TableRow android:layout_weight="1">
+
+                                    <Button
+                                        android:id="@+id/keyboard_one"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="1" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_two"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="2" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_three"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="3" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_mul"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="*" />
+                                </TableRow>
+
+                                <TableRow android:layout_weight="1">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text=" " />
+
+                                    <Button
+                                        android:id="@+id/keyboard_zero"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="0" />
+
+                                    <Button
+                                        android:id="@+id/keyboard_dian"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="." />
+
+                                    <Button
+                                        android:id="@+id/keyboard_div"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/background_white"
+                                        android:text="/" />
+                                </TableRow>
+
+                            </TableLayout>
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="1"
+                                    android:id="@+id/keyboard_tag"
+                                    android:src="@drawable/keyboard_tag"
+                                    android:background="@drawable/background_white"/>
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="1"
+                                    android:id="@+id/keyboard_back"
+                                    android:src="@drawable/keyboard_rein"
+                                    android:background="@drawable/background_white"/>
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="2"
+                                    android:id="@+id/keyboard_ok"
+                                    android:src="@drawable/keyboard_ok"
+                                    android:background="@drawable/background_white"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!--支付类型列表-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:id="@+id/category"
+                        android:gravity="right"
+                        android:visibility="gone">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/categoryList"
+                            android:layout_width="371dp"
+                            android:layout_height="192dp"
+                            android:background="@android:color/white"></android.support.v7.widget.RecyclerView>
+                        <!--收入支出栏-->
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#F3F1F1"
+                                    android:id="@+id/keyboard_cate_back"
+                                    android:src="@drawable/keybork_categoy_back" />
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/white"
+                                    android:id="@+id/keyboard_cate_out"
+                                    android:src="@drawable/keyboard_tag"/>
+
+
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+            <!--底部条-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:id="@+id/bottom_list"
+                android:layout_gravity="bottom"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp"
+                        android:background="@drawable/bg_edit"
+                        android:layout_centerHorizontal="true">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:src="@drawable/bottom_accont"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/botton_accont"
+                                android:layout_marginTop="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="账  户"
+                                android:textSize="11dp"
+                                android:textColor="#B6B6B6"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/botton_accont"/>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bottom_add"
+        app:backgroundTint="#FF9D02"
+        app:rippleColor="#E68E03" />
+
+</RelativeLayout>

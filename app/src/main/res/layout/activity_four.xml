@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourActivity"
+    android:orientation="vertical">
+
+    <com.example.nan.tbook.CustomView.MyAppTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.nan.tbook.CustomView.MyAppTitle>
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/four_1"
+        android:layout_marginTop="50dp"
+        android:text="初始"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/four_2"
+        android:text="第二"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/four_3"
+        android:text="第三"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/four_4"
+        android:text="第四"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
